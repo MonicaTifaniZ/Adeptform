@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:color="@color/yellow_light" android:state_checked="false" />
-    <item android:color="@color/yellow_dark" android:state_checked="true" />
+    <item android:color="@color/gray_dark"
+        android:state_checked="false" />
+    <item
+        android:color="@color/yellow_dark"
+        android:state_checked="true">
+        <shape>
+            <solid android:color="@color/yellow_dark"/>
+            <corners android:radius="25dip" />
+            <padding android:bottom="08dip"
+                android:left="9dip"
+                android:right="9dip"
+                android:top="08dip" />
+
+        </shape>
+    </item>
+
+
 </selector>

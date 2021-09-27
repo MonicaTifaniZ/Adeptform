@@ -1,35 +1,35 @@
 package com.monicatifanyz.adeptforms;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.widget.Toolbar;
 
-import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.navigation.NavigationView;
 
+public class SettingActivity extends AppCompatActivity {
+    MaterialToolbar mTopToolbar;
 
-public class MainActivity extends AppCompatActivity {
-
-    BottomNavigationView bottomNavigationView;
-    BottomAppBar bottomAppBar;
-    FloatingActionButton floatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_setting);
 
-
+        mTopToolbar =  findViewById(R.id.toolbar);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        // calling the action bar
+        setSupportActionBar(mTopToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @SuppressLint("NonConstantResourceId")
@@ -37,14 +37,14 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home_menu:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.account_menu:
                         startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.setting_menu:
-                        startActivity(new Intent(getApplicationContext(), SettingActivity.class));
-                        overridePendingTransition(0,0);
                         return true;
                     case R.id.file_menu:
                         startActivity(new Intent(getApplicationContext(), DocsActivity.class));
@@ -58,18 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
     }
-
-//    private boolean loadFragment(Fragment fragment) {
-//        if (fragment != null) {
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.fl_container, fragment)
-//                    .commit();
-//            return true;
-//        }
-//        return false;
-//    }
 
 
 }

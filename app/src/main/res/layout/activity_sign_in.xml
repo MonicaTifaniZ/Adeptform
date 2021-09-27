@@ -70,7 +70,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxSaveLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="42dp"
@@ -89,13 +89,12 @@
             android:layout_marginTop="15dp">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imageViewFingerprint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="45dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/fingerprint" />
-
+                android:src="@drawable/ic_fingerprint"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button"

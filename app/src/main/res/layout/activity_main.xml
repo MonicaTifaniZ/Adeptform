@@ -36,7 +36,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_gravity="start"
-            android:src="@drawable/account" />
+            android:src="@drawable/ic_user" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -175,10 +175,11 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:gravity="center"
                                 android:orientation="horizontal">
 
                                 <com.google.android.material.card.MaterialCardView
-                                    android:layout_width="115dp"
+                                    android:layout_width="110dp"
                                     android:layout_height="115dp"
                                     android:layout_marginTop="4dp"
                                     app:cardCornerRadius="6dp"
@@ -211,11 +212,11 @@
                                 </com.google.android.material.card.MaterialCardView>
 
                                 <com.google.android.material.card.MaterialCardView
-                                    android:layout_width="115dp"
+                                    android:layout_width="110dp"
                                     android:layout_height="115dp"
                                     android:layout_marginTop="4dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginStart="12dp"
                                     app:cardCornerRadius="6dp"
                                     app:strokeColor="@color/gray_light">
 
@@ -247,7 +248,7 @@
 
                                 <com.google.android.material.card.MaterialCardView
                                     android:id="@+id/tentangAsset"
-                                    android:layout_width="115dp"
+                                    android:layout_width="110dp"
                                     android:layout_height="115dp"
                                     android:layout_marginTop="4dp"
                                     app:cardCornerRadius="6dp"
@@ -429,11 +430,12 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:layout_gravity="center"
+                                android:gravity="center"
                                 android:orientation="horizontal">
 
                                 <com.google.android.material.card.MaterialCardView
-                                    android:layout_width="115dp"
-                                    android:layout_height="115dp"
+                                    android:layout_width="110dp"
+                                    android:layout_height="110dp"
                                     android:layout_marginTop="4dp"
                                     app:cardCornerRadius="6dp"
                                     app:strokeColor="@color/gray_light">
@@ -465,11 +467,11 @@
                                 </com.google.android.material.card.MaterialCardView>
 
                                 <com.google.android.material.card.MaterialCardView
-                                    android:layout_width="115dp"
+                                    android:layout_width="110dp"
                                     android:layout_height="115dp"
                                     android:layout_marginTop="4dp"
-                                    android:layout_marginEnd="10dp"
-                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:layout_marginStart="12dp"
                                     app:cardCornerRadius="6dp"
                                     app:strokeColor="@color/gray_light">
 
@@ -500,7 +502,7 @@
                                 </com.google.android.material.card.MaterialCardView>
 
                                 <com.google.android.material.card.MaterialCardView
-                                    android:layout_width="115dp"
+                                    android:layout_width="110dp"
                                     android:layout_height="115dp"
                                     android:layout_marginTop="4dp"
                                     app:cardCornerRadius="6dp"
@@ -698,6 +700,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 app:labelVisibilityMode="labeled"
+                app:itemIconTint="@drawable/custom_navigation_selector"
                 android:outlineSpotShadowColor="@color/white"
                 android:outlineAmbientShadowColor="@color/white"
                 app:menu="@menu/buttom_navigation_menu" />
