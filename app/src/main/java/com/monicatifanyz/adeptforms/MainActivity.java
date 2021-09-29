@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -20,6 +22,9 @@ import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPrefManager sharedPrefManager;
+
+
     BottomNavigationView bottomNavigationView;
     BottomAppBar bottomAppBar;
     FloatingActionButton floatingActionButton;
@@ -29,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+        bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @SuppressLint("NonConstantResourceId")

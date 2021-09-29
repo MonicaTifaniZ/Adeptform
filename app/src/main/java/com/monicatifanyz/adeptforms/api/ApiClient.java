@@ -33,7 +33,7 @@ public class ApiClient {
             retrofit = new Retrofit.Builder()
                     .addConverterFactory(GsonConverterFactory.create(builder))
                     .client(okHttpClient)
-                    .baseUrl("https://tamomon.yntkts.my.id")
+                    .baseUrl("https://tamomon.yntkts.my.id/api/")
                     .build();
 
             apiInterface = retrofit.create(ApiInterface.class);

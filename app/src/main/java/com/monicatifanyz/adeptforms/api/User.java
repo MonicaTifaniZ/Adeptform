@@ -1,8 +1,16 @@
 package com.monicatifanyz.adeptforms.api;
 
+import com.google.gson.annotations.SerializedName;
+
 public class User {
+    @SerializedName("username")
     private String username;
-    private  String password;
+
+    @SerializedName("password")
+    private String password;
+
+    public User(String username) {
+    }
 
     public String getUsername() {
         return username;
